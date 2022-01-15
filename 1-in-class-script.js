@@ -135,7 +135,9 @@ for (let i = 0; i < newRepeats; i++) {
 }
 
 // there is another way to do it all at once by combining the two arrays
-var combinedAnimals = [...animals, ...newAnimals]
+//var combinedAnimals = [...animals, ...newAnimals]
+
+//console.log(sum.apply())
 
 //unpronounceable names function
 function nameAnimalsUnpronounceable() {
@@ -149,7 +151,7 @@ function nameAnimalsUnpronounceable() {
 }
 
 
-nameAnimalsUnpronounceable()
+// nameAnimalsUnpronounceable()
 
 // console.log(animals.length + "is the number of values in the array")
 // console.log(animals[0])
@@ -158,4 +160,162 @@ nameAnimalsUnpronounceable()
 // console.log(animals[1].length)
 
 
+
+
+
+
+
+
+
+
+
+
+
+// ? 1/15/22 class problems
+
+// ? Hello world
+function helloWorld() {
+    console.log("Hello World")
+}
+
+// helloWorld()
+
+
+// ? Take input as a parameter and log it
+function returnAsString(param) {
+    console.log(param)
+}
+
+// returnAsString("test")
+
+
+// ? Add two integers
+function addNum(num1, num2) {
+    console.log(num1 + num2)
+}
+
+// addNum(5, 7)
+
+
+// ? Log the string length
+function stringLength(str) {
+    console.log(str.length)
+}
+
+// stringLength("I like coffee")
+
+
+// ? Add two strings
+function addStrings(str1, str2) {
+    return (str1 + str2)
+}
+
+// console.log(addStrings("Emir", " Gencyexitonly"))
+
+// ? Find a character of a particular index within a string.
+function findChar(str, int) {   //takes input of a string and an integer
+    console.log(str[int])       //console logs the character at that index
+}
+
+// findChar("flabbergasted", 4)
+
+
+// ? Find the last character of a string
+function findLastChar(str) {
+    console.log(str[str.length - 1]) //logs the value stored at index (str.length - 1)
+}
+
+// findLastChar("ping")
+
+
+// ? Count passwords in an array of ten characters or longer
+// ! This took some tweaking but I finally got it. This one is harder than the rest.
+function pwCount(pwArray) {                         //takes an array as a parameter
+    let longerPw = []                               //defines empty array as a new 'container'
+    for (let i = 0; i <= pwArray.length - 1; i++) { //sets up the loop counter
+        if (pwArray[i].length >= 10) {              //if the value has a character length of 10 or more
+            longerPw.push(pwArray[i])               //push that value to the empty array
+        }   //performs this if for every value in pwArray
+    }
+    console.log("These passwords are 10 chars or longer: " + longerPw)   //once the loop is done, displays the array of long passwords
+    console.log("There were " + (pwArray.length - longerPw.length) + " passwords that were too short.") //tells you how many short pws there were
+}
+
+// passwordCounter(["ten_______", "fifteen________", "six___", "four", "eleven_____", "five_"])
+
+
+
+// ? function to replace even numbers in an array with the number 5
+function replace(arr) {
+    for (let i = 0; i <= arr.length - 1; i++) {
+        if (arr[i] % 2 == 0) {
+            arr[i] = 5
+        }
+    }
+    console.log(arr)
+}
+
+// replace([1, 2, 3, 4, 5, 6, 7, 8])
+
+
+
+// ?    1.  Declare a new variable called yourName that stores an object literal that represents you! 
+// ?        It should have all of the following keys: name, age, alive, and homeTown.
+// ?        Give each of those keys an appropriate value.
+let yourName = {
+    name: "Rich",
+    age: 37,
+    alive: true,
+    hometown: "Newhall"
+}
+
+// ?    2.  Practice using dot notation to access each value on your object.
+// console.log(yourName.name)
+// console.log(yourName.age + " years old")
+// console.log(Math.floor(yourName.age / 7) + " in dog years.")
+
+
+// ?    Reassigning & Adding
+// ?    Go back to the object about you, and add a property of currentLocation to your object. 
+// ?    Assign it to a string of any coffee shop location you (used to) frequent.
+yourName["currentLocation"] = "Starbucks"
+
+// console.log(yourName.currentLocation)
+
+// ?    Now try re-assigning the age property to a different number.
+yourName.age = 100
+
+// console.log(yourName.age)
+
+// ?    Remember to call the object or the property on the last line of the file (or in the console), and run the code to verify the outcome!
+function whatIsYourName() {
+    console.log("My name is " + yourName.name + ", and I am " + yourName.age + " years old and though I am currently at " + yourName.currentLocation + ", I am from " + yourName.hometown + ". Also, I am almost certainly " + deadOrAlive())
+    function deadOrAlive() {
+        if (yourName.alive == true) {
+            return "alive."
+        } else {
+            return "dead."
+        }
+    }
+}
+
+// whatIsYourName()
+
+
+// ? While Loops are loops that terminate based on conditionals. The loop terminates when a false condition is reached. The below exercise will achieve a false condition.
+function whileLoop() {
+    // ? Create an array with 10 items in it
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+    // ? In a while loop, make a conditional that checks the number of items in the array is greater than zero
+    while (arr.length > 0) {
+
+        // ? In each iteration of the while loop, use shift or pop to remove an item. Print out the item being removed.
+        console.log(arr.pop())
+    }
+    // ? Have a console message display when the loop is no longer executing.
+    console.log("done")
+}
+
+// whileLoop()
 

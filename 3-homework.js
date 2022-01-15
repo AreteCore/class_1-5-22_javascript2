@@ -175,7 +175,7 @@ function reversingArray() {
 function fizzBuzz() {
     for (let i = 1; i <= 100; i++) {
         if (i % 15 == 0) {
-            console.log("Fizz Buzz!")
+            console.log("Fizz Buzz!") //i forgot to do 15 first originally, but 15 should be first
         } else if (i % 3 == 0) {
             console.log("Fizz!")
         } else if (i % 5 == 0) {
@@ -185,7 +185,7 @@ function fizzBuzz() {
         }  //lets hope this works
     }
 }
-fizzBuzz()
+// fizzBuzz()
 // ! I DID IT!!!!! YEAAAAAAA
 
 
