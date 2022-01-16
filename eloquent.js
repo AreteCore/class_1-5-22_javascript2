@@ -1,4 +1,6 @@
 // ! I found this on the eloquent chapter 2 and I wanted to try it
+// ! IT TOOK HOURS AND I STILL DIDNT GET IT AS PERFECT AS I WANT
+
 // Chessboard
 
 // Write a program that creates a string that represents an 8×8 grid, 
@@ -63,6 +65,7 @@ function chessBoard(dimension) {
 }
 
 // chessBoard(3)
+
 
 
 
