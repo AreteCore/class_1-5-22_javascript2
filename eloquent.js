@@ -31,15 +31,18 @@
 // ? see below for the original and some brainstorming notes
 
 function chessBoard(dimension) {
+
+    //stating dimensions, looks nicer this way
     console.log("\n" + "Your board is " + dimension + " x " + dimension + ".")
+
+    // empty variables
     let lineOdd = ""
     let lineEven = ""
     let board = ""
 
-    //constructing the lines
-    //the reason for doing it this way is 
-    //the lines HAVE to alternate to get the chessboard pattern
-    //so you have to have odd and even lines defined
+    // constructing the lines --- the reason for doing it this way is 
+    // the lines HAVE to alternate to get the chessboard pattern, so you NEED to have odd and even lines defined
+    // because depending on the dimensions, you will end up with columns that are the same color/texture whatever
     for (let i = 0; i <= dimension; i++) {
         if (i == dimension) {
             lineOdd = lineOdd + "\n"
@@ -53,7 +56,7 @@ function chessBoard(dimension) {
         }
     }
 
-    //constructing the board from the lines
+    //constructing the board by creating a big long string from the lines, "stacking" the lines, persay
     for (let i = 0; i < dimension; i++) {
         if (i % 2 == 0) {
             board = board + lineOdd
@@ -61,17 +64,22 @@ function chessBoard(dimension) {
             board = board + lineEven
         }
     }
+
     console.log(board)
 }
 
-// chessBoard(3)
+chessBoard(1)
+chessBoard(2)
+chessBoard(5)
+chessBoard(8)
+chessBoard(11)
 
 
 
 
 // ! This is version 1
 // ! this is the first way I did this, which was successful 
-// ! but I re-read the instructions and figured out I didnt use newline
+// ! but I re-read the instructions and realized I didnt use newline
 // ! scrapped it
 
 function chessBoardv1(dimension) {
